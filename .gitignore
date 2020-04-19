@@ -1,1 +1,4 @@
 *.pyc
+env/
+settings.json
+solution.py
