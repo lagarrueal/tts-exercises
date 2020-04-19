@@ -1,3 +1,4 @@
+import itertools
 
 def read_diphones(path: str = './data/dps.tsv'):
     '''
@@ -9,8 +10,9 @@ def read_diphones(path: str = './data/dps.tsv'):
     dps = []
     with open(path) as f:
         for line in f:
-            dps.append(line.strip().split('\t'))
+            dps.append(tuple(line.strip().split('\t')))
     return dps
+
 
 def read_list(path: str = './data/list.tsv'):
     '''
@@ -29,14 +31,13 @@ def read_list(path: str = './data/list.tsv'):
     return out
 
 
-def save_list(txts: list, prons: list, path: str = './data/my_list.tsv'):
+def save_list(list_data: list, path: str = './data/my_list.tsv'):
     '''
     Saves a generated reading list to <path>
 
     Input arguments:
-    * txts (list): A list of strings containing the sentences to be read
-    * prons (list): A list of tuples where each element of the tuple corresponds
-    with the phonetic label for a word in the sentence
+    * list_data (list): Your reading list dataa in the same format as
+    returned from read_list()
     * path (str='./data/my_list.tsv'): Where the export will be stored
 
     For example:
@@ -47,13 +48,49 @@ def save_list(txts: list, prons: list, path: str = './data/my_list.tsv'):
     '''
 
     with open(path, 'w') as f:
-        for i, txt in enumerate(txts):
-            pron = '\t'.join(prons[i])
-            f.write(f'{txt}\t{pron}\n')
+        if list_data is not None:
+            for item in list_data:
+                pron = '\t'.join(item[1])
+                f.write(f'{item[0]}\t{pron}\n')
+        else:
+            for i, txt in enumerate(txts):
+                pron = '\t'.join(prons[i])
+                f.write(f'{txt}\t{pron}\n')
 
-def coverage(list_path:str):
+
+def coverage(list_path: str = './data/list.tsv'):
     '''
     Measure the coverage of a reading list at <list_path>
-    TODO
+    * list_path (str): A path to a file with sentence pronouncation
+    tab-seperated values.
     '''
+    all_dps = read_diphones()
     reading_list = read_list(list_path)
+    rl_dps = set()
+    for utt in reading_list:
+        dps = prons_2_dps(utt[1])
+        for dp in dps:
+            rl_dps.add(dp)
+    return len(rl_dps) / len(all_dps)
+
+def prons_2_dps(prons: list):
+    '''
+    Transforms a list of lists where each list contains word
+    pronounciations into a list of diphones
+    Input arguments:
+    * pron (list): A list of lists containing word pronounciations
+    e.g. [('~', 'j', 'ɛː', 'ɣ'), ('h', 'ɛ', 'l', 't')] ->
+    [('~', 'j'), (), ...]
+
+    '''
+    pron = list(itertools.chain.from_iterable([p.split(' ') for p in prons]))
+    return pron_2_dps(pron)
+
+
+def pron_2_dps(pron: list):
+    '''
+    Transform a string representing a pronounciation for a single
+    word into diphone duples.
+    e.g. ('~', 'j', 'ɛː', 'ɣ') -> [('~', 'j'), ('j', 'ɛː'), ('ɛː', 'ɣ')]
+    '''
+    return [(pron[i], pron[i+1]) for i in range(len(pron) - 1)]
