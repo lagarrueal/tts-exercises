@@ -1,6 +1,9 @@
 # T-717-SPST exercises
 This repository contains excercises and supporting code for the course T-717-SPST at Reykjavik University.
 
+* Exercise 1: Create a reading list
+* Exercise 2: Digital signals
+* Exercise 3: Ossian in AWS
 
 ## Setting up environment
 
