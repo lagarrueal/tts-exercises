@@ -7,3 +7,4 @@ Your task is to maximize diphone coverage in a list of 500 sentences. The covera
 * A list of diphones in IPA format is also found under `./data`.
 * `example.py` contains examples of how to retrieve the corpus and diphones.
 * Note: The diphone coverage of `list.tsv` is more than 1.0. This is because `list.tsv` contains possibly wrong phonetic predictions and therefore impossible diphones that don't appear in `dps.tsv`.
+* Your reported coverage will be the one returned from `tools.coverage()`. See `example.py` for usage.
