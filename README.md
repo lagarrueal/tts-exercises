@@ -4,6 +4,7 @@ This repository contains excercises and supporting code for the course T-717-SPS
 * Exercise 1: Create a reading list
 * Exercise 2: Digital signals
 * Exercise 3: Ossian in AWS
+* Exercise 4: Spectrum
 
 ## Setting up environment
 
