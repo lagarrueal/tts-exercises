@@ -1,4 +1,4 @@
-# Digital Signals
+# Digital Audio
 
 ## Playing with the sample rate
 1. Load a sample from the `./data` directory and half the number of samples by removing every second sample. Keep the same sample rate and save the waveform. Describe the results. Why does this happen?
