@@ -21,12 +21,16 @@ def say_phone(number: str, out_path:str, play: bool = False):
     save_audio(output, sr, out_path)
     if play:
         subprocess.call(['play', out_path])
+
+
 def generate_digit(digit):
     part, _ = read_audio(f'./data/{digit}.wav')
     return part
 
+
 def splice(parts):
     return np.hstack(parts)
+
 
 if __name__ == '__main__':
     say_phone('8218722', './data/ex.wav', play=True)

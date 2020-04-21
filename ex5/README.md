@@ -37,4 +37,7 @@ def speak(hour, minute):
 
 Take a look at `example.py` but you will need to define at least:
 * your `say_phone()` function that takes in the text or whatever the input is for your system
-*
+* `splice()` The function that will combine your waveforms. It doesn't have to be complicated but some linear fading might be a good addition here!
+
+You could also add:
+* A function `gen_silence(duration, sr)` that creates a number of 0-frames to represent a period of silence for the given duration. This would allow you to create more complicated "prosody" by e.g. adding a period of silence after a "," in your input sentence (e.g. "Hello, my name is Atli").
