@@ -1,6 +1,7 @@
 import soundfile
 import numpy as np
-import matplotlib.pyplot as plt
+import time
+
 
 def read_audio(path: str = './data/f1.wav'):
     '''
@@ -21,8 +22,3 @@ def save_audio(wave: np.ndarray, sr: int, path: str):
     * path (str): Where the new file will be stored
     '''
     soundfile.write(path, wave, sr)
-
-
-def plot_f(wave, sr):
-    plt.magnitude_spectrum(wave, sr, sides='twosided')
-    plt.show()
