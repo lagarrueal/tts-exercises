@@ -1,5 +1,8 @@
 import soundfile
 import numpy as np
+import matplotlib.pyplot as plt
+import librosa
+import librosa.display
 
 def read_audio(path: str = './data/f1.wav'):
     '''
@@ -20,3 +23,20 @@ def save_audio(wave: np.ndarray, sr: int, path: str):
     * path (str): Where the new file will be stored
     '''
     soundfile.write(path, wave, sr)
+
+
+def plot_spectrum(wave, sr):
+    plt.magnitude_spectrum(wave, sr, sides='twosided')
+    plt.show()
+
+
+def plot_spectrogram(wave, sr):
+    S = librosa.feature.melspectrogram(y=wave, sr=sr, fmax=8000)
+    plt.figure(figsize=(10, 4))
+    S_dB = librosa.power_to_db(S, ref=np.max)
+    librosa.display.specshow(S_dB, x_axis='time',
+        y_axis='mel', sr=sr, fmax=8000)
+    plt.colorbar(format='%+2.0f dB')
+    plt.title('Mel-frequency spectrogram')
+    plt.tight_layout()
+    plt.show()

@@ -1,11 +1,13 @@
 # T-717-SPST exercises
+
 This repository contains excercises and supporting code for the course T-717-SPST at Reykjavik University. (Work in progress)
-* Exercise 1: Quantization
-* Exercise 2: Digital Audio
-* Exercise 3: Domain specific synthesis
-* Exercise 4: Create a reading list
-* Exercise 5: Festival in Docker
-* Exercise 6: Ossian in AWS
+* Exercise 1: Digital Audio
+* Exercise 2: Audio Manipulation
+* Exercise 3: Domain Specific TTS
+* Exercise 4: Script Design
+* Exercise 5: Record Your Data (*work in progress*)
+* Exercise 6: Festival in Docker (*work in progress*)
+* Exercise 7: Ossian in AWS (*work in progress*)
 
 ## Setting up environment
 
@@ -27,3 +29,10 @@ To get the best experience make sure that your VS Code workspace is using the co
 * search for `pythonpath` and edit the value to point to your python interpreter as explained above.
 
 You can read a more detailed document about python environments in VSC [here](https://code.visualstudio.com/docs/python/environments).
+
+## How to return the assignment
+Each assignment has a `README.md` which includes the assignment description. You should return a PDF file where each question in `README.md` that is marked with `(*)` is answered. Try to adhere to the numbering in the `README.md` files. For example, label the answer to the first question in [this assignment](1_digital_audio/README.md) as `1.1`. Furthermore:
+* Each assignment has a `template.py` file. This file should be included in your submission with your own code filled in as well as any other helper functions you write to generate your results.
+* Some assignments have an `example.py` file that shows how to use some of the functions that are given in `tools.py`.
+* In some of the assignments you are asked to generate and save waveforms to disk. In those cases, it is good to include those as well.
+Turn in your assignment on the Canvas page for the course.
