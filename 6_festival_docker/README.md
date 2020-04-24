@@ -1,12 +1,12 @@
 # Festival in Docker
 
 ## Installing Docker
-* Install docker : https://www.docker.com/
+* Install the Docker engine for your OS : `https://docs.docker.com/engine/install/`
 * Recommended for Linux users (needed for Visual Studio Code integration):
     * Add yourself to the docker system group:
         * `sudo usermod -aG docker $USER`
         * restart your system
-
+* You have to be minimally able to successfully run a container with the ubuntu image: `docker run --rm -it ubuntu:xenial /bin/bash`.
 
 ## Installing VS code and extensions (recommended)
 This is recommended for those with little prior experience with Docker.
