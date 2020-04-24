@@ -1,6 +1,17 @@
 import soundfile
 import numpy as np
 
+def read_audio(path: str = './data/f1.wav'):
+    '''
+    Uses soundfile to read a PCM file and returns
+    a numpy array containing samples and the sample rate
+
+    Input arguments:
+    * path (str='./data/f1.wav'): A path to a .wav file
+    '''
+    return soundfile.read(path)
+
+
 def save_audio(wave: np.ndarray, sr: int, path: str):
     '''
     Save a waveform to file using soundfile
