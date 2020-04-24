@@ -40,7 +40,7 @@ Lets see what happens when we manipulate the sample rate.
 
 
 ## 4. Combine
-Create something! You can do whatever you like here using the methods we have uncovered already and methods used in `example.py`. If you have no idea what to do, do this:
+1. (*) Create something! You can do whatever you like here using the methods we have uncovered already and methods used in `example.py`. Explain what you decided to do. If you have no idea what to do, do this:
 1. Load `f1.wav` and `m2.wav`
 2. Segment each recording into 1 second segments
 3. zip the segments
