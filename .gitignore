@@ -2,3 +2,9 @@
 env/
 settings.json
 solution.py
+
+# Ignore all *.wav files except the example ones
+*.wav
+!1_digital_audio/data
+!2_audio_manipulation/data
+!3_domin_specific_tts/
