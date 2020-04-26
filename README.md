@@ -30,6 +30,13 @@ To get the best experience make sure that your VS Code workspace is using the co
 
 You can read a more detailed document about python environments in VSC [here](https://code.visualstudio.com/docs/python/environments).
 
+
+## Using this repository
+I would recommend forking this repository before starting your work. By doing that you could easily version control your own work throughout the course. Notes:
+* This repository will ignore `*.wav` files, except for the `data/` directories in assignments 1-3. If you want to track your results as well, either save them in these `./data` directories or modify the `.gitignore` file.
+* This repository is a work in progress so when important changes are made, follow [this](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) to update your fork according to the upstream.
+
+
 ## How to return the assignment
 Each assignment has a `README.md` which includes the assignment description and what to turn in. You should return a PDF file where each question in `README.md` that is marked with `(*)` is answered. Try to adhere to the numbering in the `README.md` files. For example, label the answer to the first question in [this assignment](1_digital_audio/README.md) as `1.1`. Furthermore:
 * Each assignment has a `template.py` file. This file should be included in your submission with your own code filled in as well as any other helper functions you write to generate your results.
