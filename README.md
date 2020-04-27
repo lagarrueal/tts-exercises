@@ -5,7 +5,7 @@ This repository contains excercises and supporting code for the course T-717-SPS
 * Exercise 2: Audio Manipulation
 * Exercise 3: Domain Specific TTS
 * Exercise 4: Script Design
-* Exercise 5: Record Your Data (*work in progress*)
+* Exercise 5: Record Your Data
 * Exercise 6: Festival in Docker (*work in progress*)
 * Exercise 7: Ossian in AWS (*work in progress*)
 
