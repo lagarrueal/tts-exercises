@@ -5,7 +5,7 @@
 Digital audio is stored as a sequence of `samples`. Each sample is just a numeric value with a certain precision. The `sample rate` (sr) is the number of samples the audio signal contains per second. Generally speaking, when sample rate increases, the quality of the audio increases.
 
 1. Define a function that takes in a sample index and sample rate and returns the time value in seconds that correspond to the index.
-    * A signal has sample rate = 1. The 1st sample is sampled after 0 seconds, the 2nd sample is sampled after 1 second.
+    * A signal has sample rate = 1. The 0th sample is sampled after 0 seconds, the 2nd sample is sampled after 1 second.
     * A signal has sample rate = 200. The 5th sample is sampled after 0.025 seconds.
 
 2. Create another function that achieves the same but for an 1-D array of sample indices (e.g. [0, 500, 1000, ...]). You can use your sample_to_time function as long as the output is a numpy array.
