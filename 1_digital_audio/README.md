@@ -8,6 +8,7 @@ Digital audio is stored as a sequence of `samples`. Each sample is just a numeri
     * A signal has sample rate = 1. The 0th sample is sampled after 0 seconds, Sample of `i=1` is sampled after 1 second.
     * A signal has sample rate = 200. Sample at `i=5` is sampled after 0.025 seconds.
 
+
 2. Create another function that achieves the same but for an 1-D array of sample indices (e.g. [0, 500, 1000, ...]). You can use your sample_to_time function as long as the output is a numpy array.
     * Calling `samples_to_time(np.arange(0, 22050, 512), 22050)` should produce the following results:
         ```
@@ -45,8 +46,8 @@ The frequency of a sine wave can be understood as the number of cycles the sine 
 
 
 Based on what we have seen so far, it would be beneficial to be able to control more than just the sample rate of our sine waves. We also want to control:
-    * The frequency of the sine wave (i.e. how many cycles the sine wave achieves per second)
-    * The duration of the wave (in seconds)
+* The frequency of the sine wave (i.e. how many cycles the sine wave achieves per second)
+* The duration of the wave (in seconds)
 Lets tackle these two parameters one by one.
 
 4. (*) Define a function `sine5(sine_hz, sr)` that returns a sine wave with a 5 second duration sampled with the given `sr` and a frequency corresponding to `sine_hz`. Plot 3 sine waves in the same figure with `sine_hz = 1` and
