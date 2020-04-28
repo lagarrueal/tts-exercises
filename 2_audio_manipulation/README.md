@@ -19,7 +19,7 @@ Lets see what happens when we manipulate the sample rate.
     * Load a sample from the `./data` directory and half the number of sample using your function.
     * Save the waveform and keep the same sample rate. Describe the results. Why does this happen?
 2. (*) Now do the same but half the sample rate as well when you save the waveform. Describe the results. Why does this happen?
-3. (*) Next repeat step two but remove ever more samples while reducing the sample rate at an equal rate. Compare the output for sr, sr/2, sr/4, sr/8, sr/16. sr/32. At what point does the audio get too distorted in your opinion? At what point could you no longer understand what is being said. Calculate what the actual sample rate is at these points and compare to what is used in telephone audio (8000 kHz).
+3. (*) Next repeat step two but remove ever more samples while reducing the sample rate at an equal rate. Compare the output for sr, sr/2, sr/4, sr/8, sr/16. sr/32. At what point does the audio get too distorted in your opinion? At what point could you no longer understand what is being said. Calculate what the actual sample rate is at these points and compare to what is used in telephone audio (8000 Hz).
 
 
 ## 3. Mixing waveforms
