@@ -2,6 +2,7 @@
 env/
 settings.json
 solution.py
+*.env
 
 # Ignore all *.wav files except the example ones
 *.wav
