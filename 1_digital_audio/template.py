@@ -8,6 +8,8 @@ def sample_to_time(sample_ind: int, sr: int):
     takes in a sample index and sample rate and returns
     the time value in seconds that correspond to the index
     '''
+    return sample_ind * sr
+
 
 def samples_to_time(sample_inds: np.ndarray, sr: int):
     '''
@@ -17,9 +19,11 @@ def samples_to_time(sample_inds: np.ndarray, sr: int):
 
 def gen_time(duration: int, sr: int):
     '''
-    Returns time stamps in seconds for the given duration at
-    the given sample rate.
+    Returns time stamps in seconds for the given duration (in seconds!)
+    at the given sample rate.
     '''
+
+
 
 
 def single_period(sr: int):
@@ -73,3 +77,7 @@ def high_sine():
     sr = ...
     sine_wave = ...
     save_audio(sine_wave, sr, './data/high_sine.wav')
+
+
+if __name__ == "__main__":
+    print(samples_to_time(10, 100))
