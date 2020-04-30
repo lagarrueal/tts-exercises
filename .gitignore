@@ -1,7 +1,9 @@
 *.pyc
 env/
 settings.json
+
 solution.py
+tests/
 *.env
 
 # Ignore all *.wav files except the example ones
