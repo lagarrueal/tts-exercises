@@ -21,6 +21,8 @@ Most of the work will go into step two where you have to create some sort of a c
 ## Adding your own sentences
 You might want to add your own sentences to the list. by adding e.g. your name to the list of sentences you would guarantee that your TTS will always output your name in the correct form. But to do this, you have to first run a G2P model on your custom sentences. I have created a repository for you to do this and it is available [here](https://github.com/atliSig/g2p).
 
+**Bonus**: Does your reading list contain any questions? The prosody of questions is distinctly different from non-questions. If not, you might add 10 questions to your reading list to try and make up for that. If you are a non-Icelandic speaker you can search through `./data/list.tsv` for questions.
+
 
 ## What to turn in
 * Turn in your code as usual
