@@ -35,6 +35,10 @@ You might want to add your own sentences to the list. by adding e.g. your name t
     * What is the unit type you are trying to cover? (e.g. diphones)
     * How your algorithm works.
 * clearly state the coverage your script achieves.
+* Bonus:
+    * Measure the coverage at every insertion step. Plot a graph of the coverage of the lifetime of the algorithm
+    * Create a phone-phone heatmap of your reading list and a randomly sampled one where `heatmap[i,j]` represents the
+    density of the diphone `/p_i/p_j/` where `/p_i/` and `/p_j/` are phonemes.
 
 
 ## Notes:
