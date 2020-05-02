@@ -60,7 +60,7 @@ One of the great benefits of using VS code over SSH is you can use a fully fletc
     * Select `Connect to host...`
     * Select your amazon EC2 host.
 
-# Setup the necessary tools for Ossian
+# Setup the necessary tools for Ossian (*on the VM*)
 1. Install Python : `sudo apt-get install python`
 2. Install pip:
     * run `curl -O https://bootstrap.pypa.io/get-pip.py`
