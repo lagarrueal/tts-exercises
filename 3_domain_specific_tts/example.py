@@ -32,7 +32,7 @@ def splice(parts):
 
 
 if __name__ == '__main__':
-    say_phone('58122345', './data/ex.wav', play=True)
+    say_phone('58122345', './data/ex.wav')
     # you can also use the following if you have
     # sox installed on your system.
     # say_phone('5812345', './data/ex.wav', play=True)
