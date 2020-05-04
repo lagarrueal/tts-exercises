@@ -8,7 +8,7 @@ This repository contains excercises and supporting code for the course T-717-SPS
 * Exercise 5: Record Your Data
 * Exercise 6: Festival in Docker (*work in progress*)
 * Exercise 7: Ossian in AWS
-* Exercise 8: Create a MOS system
+* Exercise 8: Evaluate your TTS
 
 ## Setting up environment
 

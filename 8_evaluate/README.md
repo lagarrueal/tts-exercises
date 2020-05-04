@@ -1,4 +1,4 @@
-# Create a MOS system
+# Evaluate your TTS
 It is time to evaluate your TTS systems. We will use the very popular MOS (Mean Opinion Score) metric for this task. In a MOS test a participant:
 * Listens to multiple synthesized waveforms
 * The participant rates each on a scale from 1 to 5, 1 being "completely unnatural" and 5 being "completely natural"
