@@ -1,0 +1,17 @@
+{
+    "speakers": [
+        {
+            "id": 3,
+            "name": "Atli Thor Sigurgeirsson",
+            "email": "atlithors@ru.is",
+            "sex": null,
+            "age": null,
+            "dialect": null
+        }
+    ],
+    "collection": {
+        "id": 23,
+        "name": "test",
+        "assigned_user_id": 3
+    }
+}

@@ -1,0 +1,254 @@
+{
+    "11": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 123,
+            "fname": "my_list_000000123.token",
+            "score": 1.0,
+            "text": "Lesendur þurfa að fá tækifæri til að njóta hans.",
+            "pron": "~ l ɛː s ɛ n t ʏ r\tθ ʏ r v a\taː ð\tf auː\ttʰ aiː c ɪ f aiː r ɪ\ttʰ ɪː l\taː ð\tn j ouː t a\th a n s ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125858.476Z_r000000011_t000000123.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 4.65,
+            "start": 1.27921062936553,
+            "end": 4.12708830788005
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "3": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 115,
+            "fname": "my_list_000000115.token",
+            "score": 1.0,
+            "text": "Ég held að það sé ekki rétt orð, þetta komi ekkert almanakinu við.",
+            "pron": "~ j ɛː ɣ\th ɛ l t\taː ð\tθ aː ð\ts j ɛː\tɛ h c ɪ\tr j ɛ h t\tɔ r ð\tθ ɛ h t a\tkʰ ɔː m ɪ\tɛ h c ɛ r̥ t\ta l m a n aː c ɪ n ʏ\tv ɪː ð ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125953.385Z_r000000003_t000000115.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 6.48,
+            "start": 1.37927710843374,
+            "end": 5.46506024096386
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "4": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 116,
+            "fname": "my_list_000000116.token",
+            "score": 1.0,
+            "text": "Fréttirnar eru sko aldeilis dæmalausar.",
+            "pron": "~ f r j ɛ h t ɪ t n a r\tɛː r ʏ\ts k ɔ\ta l t ei l ɪ s\tt aiː m a l œyː s a r ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125940.339Z_r000000004_t000000116.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 3.93,
+            "start": 1.08902986094036,
+            "end": 3.39335391452431
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "5": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 117,
+            "fname": "my_list_000000117.token",
+            "score": 1.0,
+            "text": "Það var miði í póstkassanum.",
+            "pron": "~ θ aː ð\tv aː r\tm ɪː ð ɪ\tiː\tpʰ ou s t k a s a n ʏ m ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125924.590Z_r000000005_t000000117.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 3.99,
+            "start": 1.60240053183255,
+            "end": 3.14871704505095
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "7": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 119,
+            "fname": "my_list_000000119.token",
+            "score": 1.0,
+            "text": "Ég tel að þetta sé óskaplega mikil sóun á mannauði hjá einni þjóð.",
+            "pron": "~ j ɛː ɣ\ttʰ ɛː l\taː ð\tθ ɛ h t a\ts j ɛː\touː s k a p l ɛ ɣ a\tm ɪː c ɪ l\ts ouː ʏ n\tauː\tm a n œy ð ɪ\tç au\tei t n ɪ\tθ j ouː ð ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125846.033Z_r000000007_t000000119.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 5.46,
+            "start": 1.00867050970321,
+            "end": 4.91178682985912
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "8": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 120,
+            "fname": "my_list_000000120.token",
+            "score": 1.0,
+            "text": "Yfirverkfræðingur hjá Reykjavíkurborg segir að sökin liggi hjá ökumönnum.",
+            "pron": "~ ɪː v ɪ r v ɛ r̥ k f r ai ð i ŋ k ʏ r\tç au\tr eiː c a v iː k ʏ r p ɔ r k\ts ei j ɪ r\taː ð\ts œː c ɪ n\tl ɪ c ɪ\tç au\tœː k ʏ m œ n ʏ m ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125828.517Z_r000000008_t000000120.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 6.09,
+            "start": 1.23512048192771,
+            "end": 5.42963855421687
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "9": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 121,
+            "fname": "my_list_000000121.token",
+            "score": 1.0,
+            "text": "Og nú átti sem sagt að hafa sama háttinn á gagnvart stúdentum hér við Háskólann.",
+            "pron": "~ ɔː ɣ\tn uː\tau h t ɪ\ts ɛː m\ts a x t\taː ð\th aː v a\ts aː m a\th au h t ɪ n\tauː\tk a k v a r̥ t\ts t uː t ɛ n̥ t ʏ m\tç ɛː r\tv ɪː ð\th auː s k ou l a n ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T130017.138Z_r000000009_t000000121.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 6.16,
+            "start": 1.06377510040161,
+            "end": 5.45493975903614
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "10": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 122,
+            "fname": "my_list_000000122.token",
+            "score": 1.0,
+            "text": "Bæði almennt og sérstakt veiðigjald er lagt flatt sem föst krónutala á þorskígildiskíló.",
+            "pron": "~ p aiː ð ɪ\ta l m ɛ n̥ t\tɔː ɣ\ts j ɛ r̥ s t a x t\tv eiː ð ɪ c a l t\tɛ r\tl a x t\tf l a h t\ts ɛː m\tf œ s t\tkʰ r ouː n ʏ tʰ aː l a\tauː\tθ ɔ r̥ s c i c ɪ l t ɪ s c i l ou ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125914.815Z_r000000010_t000000122.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 7.77,
+            "start": 1.76306714385888,
+            "end": 7.20829221648499
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    "12": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 124,
+            "fname": "my_list_000000124.token",
+            "score": 1.0,
+            "text": "Ég hlýddi strax og fór yfir til mín.",
+            "pron": "~ j ɛː ɣ\tl̥ i t ɪ\ts t r a k s\tɔː ɣ\tf ouː r\tɪː v ɪ r\ttʰ ɪː l\tm iː n ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T130004.875Z_r000000012_t000000124.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 3.91,
+            "start": 1.09133905235454,
+            "end": 3.19550355617481
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    }
+}
