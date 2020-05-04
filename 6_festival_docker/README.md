@@ -15,3 +15,5 @@ This is recommended for those with little prior experience with Docker.
 * Install the `docker` VSC extension by opening the extensions pane on the left (ctrl+shift+X) and search for `ms-azuretools.vscode-docker` and hit install
 * Install the `remote development` VSC extension, search for `ms-vscode-remote.vscode-remote-extensionpack`. Follow the [guide here](https://code.visualstudio.com/docs/remote/containers) to complete installation
 
+
+## Prepare the data (in the right format)
