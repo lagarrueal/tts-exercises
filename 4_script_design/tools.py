@@ -36,15 +36,16 @@ def save_list(list_data: list, path: str = './data/my_list.tsv'):
     Saves a generated reading list to <path>
 
     Input arguments:
-    * list_data (list): Your reading list dataa in the same format as
+    * list_data (list): Your reading list data in the same format as
     returned from read_list()
     * path (str='./data/my_list.tsv'): Where the export will be stored
 
     For example:
-    * txts[0] = 'Ég held að það sé ekki rétt orð, þetta komi ekkert almanakinu við.'
-    * prons[0] = ['~ j ɛː ɣ', 'h ɛ l t', 'aː ð', 'θ aː ð', 's j ɛː', 'ɛ h c ɪ',
+    list_data[0] =
+    ('Ég held að það sé ekki rétt orð, þetta komi ekkert almanakinu við.',
+        ['~ j ɛː ɣ', 'h ɛ l t', 'aː ð', 'θ aː ð', 's j ɛː', 'ɛ h c ɪ',
         'r j ɛ h t', 'ɔ r ð', 'θ ɛ h t a', 'kʰ ɔː m ɪ', 'ɛ h c ɛ r̥ t',
-        'a l m a n aː c ɪ n ʏ', 'v ɪː ð ~']
+        'a l m a n aː c ɪ n ʏ', 'v ɪː ð ~'])
     '''
 
     with open(path, 'w') as f:
@@ -52,11 +53,6 @@ def save_list(list_data: list, path: str = './data/my_list.tsv'):
             for item in list_data:
                 pron = '\t'.join(item[1])
                 f.write(f'{item[0]}\t{pron}\n')
-        else:
-            for i, txt in enumerate(txts):
-                pron = '\t'.join(prons[i])
-                f.write(f'{txt}\t{pron}\n')
-
 
 def coverage(list_path: str = './data/list.tsv'):
     '''
