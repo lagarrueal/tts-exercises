@@ -17,6 +17,9 @@ There is a good [document on speech.zone](http://www.speech.zone/exercises/build
 
 ## Using sLOBE
 sLOBE is a recording client that the LVL has created to facilitate recording sessions for TTS data acquisition. We have created a special client for you named sLOBE. The client is available [here](https://eyra.ru.is/slobe/). You will need to login using the credentials that I have sent you via Microsoft Teams.
+
+**Note**: you will have to use sLOBE in Chrome. The reason for that is that chrome is currently the only browser that supports the specific media constraints we use. Make sure that your Chrome is up to date.
+
 * The [collection screen](https://eyra.ru.is/slobe/collections/) shows all collections in sLOBE. You will be using the collection with the same name as your student ID.
 * To add the sentences you will read:
     * click your collection
