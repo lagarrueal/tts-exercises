@@ -15,9 +15,9 @@ There is a good [document on speech.zone](http://www.speech.zone/exercises/build
 
 **Before you start using sLOBE, send me a sample recording exported from Audacity.**
 
-## Using SLOBE
-LOBE is a recording client that the LVL has created to facilitate recording sessions for TTS data acquisition. We have created a special client for you named SLOBE. The client is available [here](https://eyra.ru.is/slobe/). You will need to login using the credentials that I have sent you via Microsoft Teams.
-* The [collection screen](https://eyra.ru.is/slobe/collections/) shows all collections in SLOBE. You will be using the collection with the same name as your student ID.
+## Using sLOBE
+sLOBE is a recording client that the LVL has created to facilitate recording sessions for TTS data acquisition. We have created a special client for you named sLOBE. The client is available [here](https://eyra.ru.is/slobe/). You will need to login using the credentials that I have sent you via Microsoft Teams.
+* The [collection screen](https://eyra.ru.is/slobe/collections/) shows all collections in sLOBE. You will be using the collection with the same name as your student ID.
 * To add the sentences you will read:
     * click your collection
     * click the orange "breyta" button
@@ -42,7 +42,7 @@ LOBE is a recording client that the LVL has created to facilitate recording sess
 
 ## Recording Your Voice
 * In our experiments, each 50 sentence session takes about 10 minutes to finish. This means that you could finish recording your list of 500 sentences in two 50 minute sessions. We recommend you do this across two days to avoid any strain.
-* When you have finished your reading list you can export the dataset from LOBE.
+* When you have finished your reading list you can export the dataset from sLOBE.
 
 ## Downloading Your Data
 After recording all your sentences, it is time to download the data.
