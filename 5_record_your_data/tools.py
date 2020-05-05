@@ -1,3 +1,5 @@
+import json
+
 import soundfile
 import numpy as np
 
@@ -21,3 +23,8 @@ def save_audio(wave: np.ndarray, sr: int, path: str):
     * path (str): Where the new file will be stored
     '''
     soundfile.write(path, wave, sr)
+
+
+def dump_json(item, path: str):
+ with open(path, 'w', encoding='utf-8') as json_f:
+    json.dump(item, json_f, ensure_ascii=False, indent=4)

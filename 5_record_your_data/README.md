@@ -77,7 +77,7 @@ where:
 * `meta.json`: Contains general information about the collection
 * `info.json`: Contains detailed information about each recording:
     * Each item in this dictionary is identified by the sLOBE id of the recording
-    * `info[recording_id]['recording_info]['start']` and `info[recording_id]['recording_info]['stop']` are float value time stamps you can use to trim your recordings if you have used the trim functionality in sLOBE.
+    * `info[recording_id]['recording_info]['start']` and `info[recording_id]['recording_info]['end']` are float value time stamps you can use to trim your recordings if you have used the trim functionality in sLOBE.
 
 After downloading your data you should trim the recordings:
 * To avoid completely destroying the archive you should first create a copy of the archive on your hard drive.
@@ -87,7 +87,6 @@ After downloading your data you should trim the recordings:
 ## What to Turn In
 * A short document that includes:
     * Details about your recording environment, such as choice of microphone, how you maintained the same position relative to mic across sessions etc. A photo of your recording environment is also beneficial.
-    * A list of the recording sessions and the duration of them (TODO: add information about how to do this in LOBE)
     * We will monitor your progress on LOBE and you don't need to send us your datasets.
     * The dataset export includes a detailed information file, `info.json`. Each item in that file has a `text_info` and a `recording_info` dictionary.
         * Using `item['text_info']['text]` as well as `item['recording_info']['duration']` calculate the average string length of your text data and the average recording duration. Plot a scatter plot for each recording item where string length is on the x-axis and recording duration is on the y-axis.
@@ -146,6 +145,8 @@ Your task is the following:
     ```
     * Use prior knowledge from previous assignments to trim the recordings using the `start` and `end` values in `info.json` and replace each recording in your archive with the trimmed version. Note: To achieve this, you should create a function `time_to_samples(time_stamp, sr)`. It should convert a float value time stamp to the corresponding sample index, given the sample rate.
     * Take a look at `example.py` to understand how to traverse the archive and perform OS operations using Python.
+    * `tools.dump_json` is a function that will dump your new `info.json` in the correct format.
+
 ## What to turn in
 You should turn in
 * the `info.json` file
