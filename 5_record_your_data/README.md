@@ -84,13 +84,16 @@ After downloading your data you should trim the recordings:
 * Use prior knowledge from previous assignments to trim the recordings using the `start` and `end` values in `info.json` and replace each recording in your archive with the trimmed version. Note: To achieve this, you should create a function `time_to_samples(time_stamp, sr)`. It should convert a float value time stamp to the corresponding sample index, given the sample rate.
 * Take a look at `example.py` to understand how to traverse the archive and perform OS operations using Python.
 
+**Note**: If you would rather automatically trim your recorded waveforms rather than manually, you can do so using `librosa.effects.trim`, [information here](https://librosa.github.io/librosa/core.html). If you decide to do this, follow part 6 of the `Alternative assignment for foreign students` below.
+
 ## What to Turn In
 * A short document that includes:
     * Details about your recording environment, such as choice of microphone, how you maintained the same position relative to mic across sessions etc. A photo of your recording environment is also beneficial.
     * We will monitor your progress on LOBE and you don't need to send us your datasets.
     * The dataset export includes a detailed information file, `info.json`. Each item in that file has a `text_info` and a `recording_info` dictionary.
         * Using `item['text_info']['text]` as well as `item['recording_info']['duration']` calculate the average string length of your text data and the average recording duration. Plot a scatter plot for each recording item where string length is on the x-axis and recording duration is on the y-axis.
-
+        * turn in `info.json`
+    * turn in `template.py` with your code.
 `
 # Alternative assignment for foreign students
 We are very understanding of the fact that some of you have limited knowledge of Icelandic and would likely prefer to complete the assignment in your own language. Unfortunately we cannot facilitate the work that is required to prepare TTS models for multiple languages since we only have access to Icelandic data. Therefore we have prepared an alternative assignment for you that doesn't require you to speak Icelandic.
