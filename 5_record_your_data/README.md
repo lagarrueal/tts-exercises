@@ -81,7 +81,7 @@ where:
 
 After downloading your data you should trim the recordings:
 * To avoid completely destroying the archive you should first create a copy of the archive on your hard drive.
-* Use prior knowledge from previous assignments to trim the recordings using the `start` and `stop` values in `info.json` and replace each recording in your archive with the trimmed version. Note: To achieve this, you should create a function `time_to_samples(time_stamp, sr)`. It should convert a float value time stamp to the corresponding sample index, given the sample rate.
+* Use prior knowledge from previous assignments to trim the recordings using the `start` and `end` values in `info.json` and replace each recording in your archive with the trimmed version. Note: To achieve this, you should create a function `time_to_samples(time_stamp, sr)`. It should convert a float value time stamp to the corresponding sample index, given the sample rate.
 * Take a look at `example.py` to understand how to traverse the archive and perform OS operations using Python.
 
 ## What to Turn In
@@ -92,6 +92,7 @@ After downloading your data you should trim the recordings:
     * The dataset export includes a detailed information file, `info.json`. Each item in that file has a `text_info` and a `recording_info` dictionary.
         * Using `item['text_info']['text]` as well as `item['recording_info']['duration']` calculate the average string length of your text data and the average recording duration. Plot a scatter plot for each recording item where string length is on the x-axis and recording duration is on the y-axis.
 
+`
 # Alternative assignment for foreign students
 We are very understanding of the fact that some of you have limited knowledge of Icelandic and would likely prefer to complete the assignment in your own language. Unfortunately we cannot facilitate the work that is required to prepare TTS models for multiple languages since we only have access to Icelandic data. Therefore we have prepared an alternative assignment for you that doesn't require you to speak Icelandic.
 
@@ -112,7 +113,39 @@ Your task is the following:
     * Once you think you have a suitable value, you should generate a plot for three different samples:
         * first plot the untrimmed waveform
         * then plot two vertical lines that denote where you trim the waveform by using the index returned by `librosa.effects.trim()`
-
+    * For each recording you should add float-value time stamps to the `recording_info` objects in `info.json`. Each item in your `info.json` should therefore look something like the following
+    ```
+    "11": {
+        "collection_info": {
+            "user_name": "Atli Thor Sigurgeirsson",
+            "user_id": 3,
+            "session_id": 3
+        },
+        "text_info": {
+            "id": 123,
+            "fname": "my_list_000000123.token",
+            "score": 1.0,
+            "text": "Lesendur þurfa að fá tækifæri til að njóta hans.",
+            "pron": "~ l ɛː s ɛ n t ʏ r\tθ ʏ r v a\taː ð\tf auː\ttʰ aiː c ɪ f aiː r ɪ\ttʰ ɪː l\taː ð\tn j ouː t a\th a n s ~"
+        },
+        "recording_info": {
+            "recording_fname": "2020-05-04T125858.476Z_r000000011_t000000123.wav",
+            "sr": 48000,
+            "num_channels": 1,
+            "bit_depth": 16,
+            "duration": 4.65,
+            "start": 1.27921062936553,
+            "end": 4.12708830788005
+        },
+        "other": {
+            "transcription": null,
+            "recording_marked_bad": false,
+            "text_marked_bad": false
+        }
+    },
+    ```
+    * Use prior knowledge from previous assignments to trim the recordings using the `start` and `end` values in `info.json` and replace each recording in your archive with the trimmed version. Note: To achieve this, you should create a function `time_to_samples(time_stamp, sr)`. It should convert a float value time stamp to the corresponding sample index, given the sample rate.
+    * Take a look at `example.py` to understand how to traverse the archive and perform OS operations using Python.
 ## What to turn in
 You should turn in
 * the `info.json` file
