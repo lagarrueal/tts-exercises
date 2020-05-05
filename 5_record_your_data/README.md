@@ -92,5 +92,32 @@ After downloading your data you should trim the recordings:
     * The dataset export includes a detailed information file, `info.json`. Each item in that file has a `text_info` and a `recording_info` dictionary.
         * Using `item['text_info']['text]` as well as `item['recording_info']['duration']` calculate the average string length of your text data and the average recording duration. Plot a scatter plot for each recording item where string length is on the x-axis and recording duration is on the y-axis.
 
+# Alternative assignment for foreign students
+We are very understanding of the fact that some of you have limited knowledge of Icelandic and would likely prefer to complete the assignment in your own language. Unfortunately we cannot facilitate the work that is required to prepare TTS models for multiple languages since we only have access to Icelandic data. Therefore we have prepared an alternative assignment for you that doesn't require you to speak Icelandic.
 
+Instead of recording your own data you will be using a pre-recorded Icelandic TTS dataset, available [here](https://drive.google.com/open?id=13KSAX6tXS5DyaA1Hl6pLMd0XVDnub2vS).
 
+Your task is the following:
+1. The script `create_corpus.py` in the archive creates a tab-seperated file similar to list.tsv in the data directory of assignment 4. You have to create a new reading list like you did in assignment 4 using this new source of text.
+2. Run your reading list generation script from assignment 4 again on this file. Note that this time the file has this scheme: `recording_id`\t`sentence`\t`pronounciation` so you need to change the `read_list` and `save_list` from `tools.py` in assignment 4 to account for this
+3. You don't have to save your new reading list in the format mentioned in assignment 4, you only need to capture the coverage of this list and make a similar report as in assignment 4. You **have** to store the IDs of the recordings you have selected to continue.
+4. Store the IDs of your selected recordings somewhere safe. You will use these IDs to create your TTS training dataset. You can read more about what each of the files contain in the `README` and `example.py` under assignment 5.
+5. Using these IDs you should create a new dataset just like the one you are working with that only references your selected recordings:
+    * it should contain the directories `audio` and `text` with just your sentences and recordings
+    * you should change `info.json` and `index.tsv` to only contain references to your recordings.
+    * You should also include the `meta.json` but you shouldn't have to change that file at all.
+6. Since you will not be recording the data in sLOBE you will have to remove silence periods from the start and end of the recordings you have selected.
+    * You will use [`librosa.effects.trim`](https://librosa.github.io/librosa/generated/librosa.effects.trim.html?highlight=trim#librosa.effects.trim).
+    * Test out different values of top_db to determine a value that will cut out starting and ending silences but doesn't cut off any part of the speech waveform. You can both listen to the trimmed version and compare waveform plots to monitor this. Start with top_db=60.
+    * Once you think you have a suitable value, you should generate a plot for three different samples:
+        * first plot the untrimmed waveform
+        * then plot two vertical lines that denote where you trim the waveform by using the index returned by `librosa.effects.trim()`
+
+## What to turn in
+You should turn in
+* the `info.json` file
+* the three plots I mentioned earlier
+* information about your trimming strategy
+* The same information about coverage of your new reading list as in assignment 4
+* The dataset export includes a detailed information file, `info.json`. Each item in that file has a `text_info` and a `recording_info` dictionary.
+    * Using `item['text_info']['text]` as well as `item['recording_info']['duration']` calculate the average string length of your text data and the average recording duration. Plot a scatter plot for each recording item where string length is on the x-axis and recording duration is on the y-axis.
