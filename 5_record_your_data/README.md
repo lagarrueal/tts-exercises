@@ -115,7 +115,7 @@ Your task is the following:
     * Once you think you have a suitable value, you should generate a plot for three different samples:
         * first plot the untrimmed waveform
         * then plot two vertical lines that denote where you trim the waveform by using the index returned by `librosa.effects.trim()`
-    * For each recording you should add float-value time stamps to the `recording_info` objects in `info.json`. Each item in your `info.json` should therefore look something like the following
+    * For each recording you should add float-value time stamps to the `recording_info` objects in `info.json` that correspond to the `start` and the `end` of your speech waveform. Each item in your `info.json` should therefore look something like the following
     ```
     "11": {
         "collection_info": {

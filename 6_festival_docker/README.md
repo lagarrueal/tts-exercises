@@ -16,4 +16,8 @@ This is recommended for those with little prior experience with Docker.
 * Install the `remote development` VSC extension, search for `ms-vscode-remote.vscode-remote-extensionpack`. Follow the [guide here](https://code.visualstudio.com/docs/remote/containers) to complete installation
 
 
+## Note
+If you have reached this point, wait until the fork has been updated. I will notify you on Teams.
+
 ## Prepare the data (in the right format)
+
