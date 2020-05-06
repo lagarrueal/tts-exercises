@@ -46,6 +46,13 @@ sLOBE is a recording client that the LVL has created to facilitate recording ses
 ## Recording Your Voice
 * In our experiments, each 50 sentence session takes about 10 minutes to finish. This means that you could finish recording your list of 500 sentences in two 50 minute sessions. We recommend you do this across two days to avoid any strain.
 * When you have finished your reading list you can export the dataset from sLOBE.
+* **Important**: sLOBE uses a different audio capture backend than Audacity. This means that a reference you make in Audacity could have a higher amplitude than you get in sLOBE. To account for this do the following at the start of each session:
+    * Start a session
+    * Record the first sample
+    * Download the sample by clicking the download button in the UI
+    * Import the sample into Audacity
+    * Check the levels.
+    * If you need to change the mic, adjust it and repeat the steps above.
 
 ## Downloading Your Data
 After recording all your sentences, it is time to download the data.
