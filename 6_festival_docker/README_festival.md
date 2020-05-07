@@ -22,7 +22,7 @@ Apart from chunking, text analysis also does *text normalization*. There are man
 In English, tokens consisting of solely digits have a number of different forms of pronunciation.
 * The "*5*" above is pronounced "*fifth*", an ordinal, because it is the day in a month
 * The first "*1996*" is pronounced as "*nineteen ninety six*" because it is a year
-* the second "*1996*" is pronounced as "*one thousand nine hundred and ninety size*" (British English) as it is a quantity.
+* the second "*1996*" is pronounced as "*one thousand nine hundred and ninety six*" (British English) as it is a quantity.
 
 Two problems that turn up here: non-trivial relationship of tokens to words, and homographs, where the same token may have alternate pronunciations in different contexts. In Festival, homograph disambiguation is considered as part of text analysis. In addition to numbers, there are many other symbols which have internal structure that require special processing; such as money, times, addresses, etc. All of these can be dealt with in Festival by what is termed *token-to-word rules*. These are of course language specific.
 
@@ -118,7 +118,7 @@ All the steps to train the model are performed inside `/usr/local/src/lvl_is_txt
 
 5. Normalize the prompts for the recordings using `lvl_text/normalize.py` which can read in the `info.json` file that is exported from sLOBE:
 
-        sed -i 's/^(set! framerate .*$/(set! framerate 16000)/' festvox/clustergen.scm
+        python3 ../lvl_is_text/normalize.py info.json "-" --lobe | grep -o "[^ ]*" | sort | uniq > vocabulary.txt
 
     Most importantly, the normalizer will:
     * lower case all text
