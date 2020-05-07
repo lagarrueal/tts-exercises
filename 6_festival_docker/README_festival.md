@@ -181,7 +181,7 @@ All the steps to train the model are performed inside `/usr/local/src/lvl_is_txt
 
 ## If you have reached this point, congratulations! You have caught up with us. We are currently doing the finishing touches on the image and it will soon be ready. You can run the following but do note that you will have to re-clone the image when it is ready.
 
-## Using the Festival recipe
+## Testing the Festival recipe
 We will start by testing the recipe on pre-recorded data.
 
 1. Under `/usr/local/src/`, create a new directory: `mdkir demo_voice`.
@@ -189,4 +189,69 @@ We will start by testing the recipe on pre-recorded data.
 3. Do e.g. `export VOICE=f` if you want to train on the female voice data.
 4. Run the `build-voice.sh` script via `../lvl_is_text/build-voice.sh`
 
-The script will now perform all of the steps that were mentioned above and this could take some time to finish.
+The script will now perform all of the steps that were mentioned above and this could take some time to finish. If you have not modified `build-voice.sh` then the model will be trained on 100 sentences.
+
+If everything went as expected you should have seen a lot of stuff printed in the terminal and a new `example.wav` file should have appeared with an example synthesis sample.
+
+## Creating Your Own Voice
+We will now train the TTS on your own data.
+
+### Prepare the Data
+The recipe expects that you include at least the `audio` directory and `info.json` from the the sLOBE dataset export. Before copying your data, do the following:
+1. Make sure that you have trimmed your recordings, either using the manually recorded timestamps or by using `Librosa`.
+2. Create a **new** voice building directory under `/usr/local/src` in the container, e.g. `my_voice`.
+3. Create a `.zip` archive that contains `audio` and `info.json` at the top level of the `.zip` (i.e. `audio` and `info.json` are the only files or directories that should be in your `.zip`)
+4. Now move your `.zip` over to the voice building directory. This is relatively easy using VSC. You can simply:
+    * right click a file/folder on your OS, select `copy`
+    * right click the voice building directory in your attached container in VSC and select `paste`.
+    * This can take some time, wait a couple of minutes and you should see that your data has been copied over. If you don't see anything, press the reload icon in the header of the file explorer in VSC.
+
+If you are not going the VSC route you can use:
+
+        docker cp my_archive.zip <name_of_container>:/usr/local/src/<voice_building_directory>/my_zip.zip
+
+### Change the Recipe
+You will have to edit this part of `build-voice.sh` to train on your own data:
+
+
+        if [ -v VOICE ] && [ $VOICE = "f" ]; then
+                VOX=f1
+        else
+                VOX=m1
+        fi
+        # Set up the Festvox Clustergen build:
+        $FESTVOXDIR/src/clustergen/setup_cg lvl is $VOX
+
+        # Commit the current state of the directory. This will make it easier to see
+        # what changed since we ran setup_cg.
+        git add --all
+        git commit -q -m 'Setup for Clustergen complete.'
+
+        # Unpack the wave files into the ./wav directory:
+        #wget https://eyra.ru.is/gogn/${VOX}-small.zip
+        unzip m1-small.zip 1> unzip.log 2>unzip.err
+
+* Create a copy of `build-voice.sh` under `lvl_is_txt` called `custom-voice-build.sh`
+* Add execute privilege to the file with `chmod +x custom-voice-build.sh`.
+* Replace the code block above with the following block where you have to fill in values wrapped with `<>`:
+
+        VOX=<my_id>
+        # Set up the Festvox Clustergen build:
+        $FESTVOXDIR/src/clustergen/setup_cg lvl is $VOX
+
+        # Commit the current state of the directory. This will make it easier to see
+        # what changed since we ran setup_cg.
+        git add --all
+        git commit -q -m 'Setup for Clustergen complete.'
+
+        # Unpack the wave files into the ./wav directory:
+        unzip <name_of_your_zip>.zip 1> unzip.log 2>unzip.err
+
+### Train on Your Data
+It's time to create your voice! As with the demo data we do the following:
+1. Direct your shell to your voice bulding directory, e.g. `my_voice`.
+2. Run the custom voice building script with e.g. `../lvl_is_text/custom-voice-build.sh`
+3. Wait for results.
+
+### Synthesize custom sentences
+TODO
