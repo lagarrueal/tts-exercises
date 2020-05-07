@@ -29,7 +29,9 @@ You can either:
 
 ### Create the Container
 1. List all docker images using `docker images`. Locate your `dockerfestival` and note it's `TAG`.
-2. Then run `docker run -it  dockerfestival:latest` where `latest` is the `TAG`.
+2. Then run:
+    * If you built the image yourself: `docker run -it  dockerfestival:latest` where `latest` is the `TAG`.
+    * If you pulled the image using `docker pull` then run: `docker run -it thorsteinndg/lvlis:latest`
 3. You now have an interactive shell for your container
 
 **Attaching VSC to container**
