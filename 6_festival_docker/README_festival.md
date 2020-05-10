@@ -267,9 +267,6 @@ It's time to create your clustergen voice! As with the demo data we do the follo
 4. Refer to the trouble shooting section below if it does not finish.
 
 
-### Synthesize custom sentences
-Create a list of sentences (unseen)
-
 ## 4. Train a Unit Selection Voice
 
 You have now trained an SPS voice, it's time to train a unit selection model. There is very little difference between how we train a unit selection voice and a clustergen voice in Festival.
