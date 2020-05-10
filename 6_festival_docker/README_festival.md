@@ -264,23 +264,76 @@ It's time to create your clustergen voice! As with the demo data we do the follo
 1. Direct your shell to your voice bulding directory, e.g. `my_voice`.
 2. Run the custom voice building script with e.g. `../lvl_is_text/custom-voice-build.sh`
 3. Wait for results.
+4. Refer to the trouble shooting section below if it does not finish.
+
 
 ### Synthesize custom sentences
 Create a list of sentences (unseen)
 
-
 ## 4. Train a Unit Selection Voice
 
-You have now trained an SPS voice, it's time to train a unit selection model. There is very little difference between how we train a unit selection voice and a clusttergen voice in Festival.
+You have now trained an SPS voice, it's time to train a unit selection model. There is very little difference between how we train a unit selection voice and a clustergen voice in Festival.
 
 At `./data/build-unit-selection.sh` you will find a script similar to the `build-voice.sh` in the Docker image. You should:
 * Copy this script over to the `lvl_is_text` directory in your container (do `chmod +x <your_script_name>.sh` if needed)
-* Make the same adjustements you did to `build-voice.sh` to facilitate training on your own data
+* To avoid having to download everything again, do the following:
+    * create a folder called `data` at `/usr/local/src`
+    * Copy the `ipd_clean_slt2018.mdl` from `lvl_is_text` into `data/`
+    * Copy your collection `.zip` file into `data/`
 * Create a new voice building directory at `usr/local/src` (e.g `my_unit_selection_voice`)
+* Change line 16 in `build-unit-selection.sh` to e.g. `VOX=atli.zip` if that's the name of your zip (note: the .zip file can only contain English alphabetical characters)
 * Run the unit selection script from there
+* Refer to the trouble shooting section below if it does not finish.
 
+## 5. Finishing and what to turn in
 
-## Trouble shooting
+Now it's time to generate synthesis samples. All the tools you need are located in the `./data` directory. Do the following:
+1. Copy `add_to_lexicon.sh` and `synth_file.sh` from the data directory to your voice building directory. (remember to do `chmod +x` for both of these)
+2. Create a list of sentences to synthesize. In assignment 8 you will perform MOS on 10 synthesized samples from your Festival TTS. You should synthesize:
+   * The following 10 sentences:
+        ```
+        Það er greinilegt að vinnu stjórnvalda við breytingar og aðlaganir á aðgerðarpökkunum, til að koma í veg fyrir misnotkun, er hvergi nærri lokið.
+
+        Hnúfubakur er frekar kubbslega vaxinn, sverastur um miðjuna en mjókkar til beggja enda.
+
+        Kona hans, Hulda Jakobsdóttir varð fyrst kvenna bæjarstjóri á Íslandi, en hún tók við bæjarstjórastöðunni af Finnboga.
+
+        Drykkurinn er þekktur á íslensku undir nafninu kók
+
+        Fönk er tónlistarstefna sem varð til um miðjan sjöunda áratuginn og er nokkurs konar blanda af djassi, blúsi, gospel og sálartónlist.
+
+        Sú tilgáta hefur verið sett fram að Katrín og Hallbera Þorsteinsdóttir séu ein og sama manneskjan
+
+        Skjálesari er hjálparforrit sem les texta af tölvuskjá upphátt.
+
+        Snara er hugtak í netafræði sem á við legg sem tengir hnút í sjálfan sig.
+
+        Mikki er talandi og manngerð mús sem venjulega klæðist rauðum stuttbuxum, stórum gulum skóm og hvítum hönskum.
+
+        Stutt og laggott.
+        ```
+    * You will also demonstrate your TTS at the end of the course to us and other students. You can get a good feeling about how your TTS works by testing out *weird* sentences. For example:
+        * very short: *Nú?*
+        * very long: *Ráðgjafi stjórnvalda í upplýsingarétti telur fátt koma í veg fyrir að birta nöfn stærri fyrirtækja sem sækja fé til ríkisins með hlutabótaleiðinni, enda ætti það að vera opinberar upplýsingar en forstjóri Vinnumálastofnunar segir lítið mál að sjá hvaða einstaklingar séu á bótum ef nöfn lítilla fyrirtækja verða birt, en útilokar ekki nöfn stærri fyrirtækja.*
+        * casual: *hahaha, vá það er klikkað!*
+        * limited vocabulary: *einn, tveir, þrír, fjórir, fimm, sex, sjö, átta, níu, tíu*
+
+        Test out other 10 sentences of different *types* and look for interesting results to report on in your demonstration. You can quickly *check* a sentence by running the following from within your voice building directory
+
+          export VOX=my_voice
+          echo 'mín setning' |
+          ../festival/bin/text2wave \
+          -eval festvox/lvl_is_${VOX}_clunits.scm \
+          -eval "(voice_lvl_is_${VOX}_clunits)" \
+          > example.wav
+3. Combine this list of 20 sentences into a single file `tests.txt` and place it within your voice building directory.
+4. Run `add_to_lexicon.sh`
+5. Run `synth_file.sh`
+6. Your synthesized samples will now appear in the `synthesized` directory inside your voice building directory.
+
+**Turn In**: Run this for both your Clustergen and Unit Selection voice. Send in the `tests.txt` file and the synthesized samples for both voices.
+
+## Troubleshooting
 
 Your builds might fail and the reason for that should hopefully be written to the `build.err` file in your voice building directory. Here are common build errors that can appear in `build.err`:
 * `LEXICON: Word <word> (plus features) not found in lexicon`: The word `<word>` does not appear in the lexicon. If this word is a part of your training prompt then it likely contains invalid characters. If `<word>` is e.g. `quiet` which is invalid because it contains non-Icelandic characters, then you have to change the line
@@ -298,7 +351,11 @@ Your builds might fail and the reason for that should hopefully be written to th
         utt.load: loading from "prompt-utt/is977Z_r000002019_t000002568.utt" failed
 
    There are multiple reasons for why this might happen, a corruption in the recording, a file encoding problem, etc. This hopefully only happens to a subset of your recordings. To fix this, do the following:
-
+   * If it doesn't exist, create a directory called `data/` under `/usr/local/src`
+   * Copy your collection .zip over to e.g. a `data/atli/` directory.
+   * Unzip your collection zip with e.g. `unzip my_zip.zip`
    * identify the recording ID of the bad recording, above it is `2019` as indicated by `r000002019`. In some datasets it might be `r2019`.
    * Remove the corresponding object from your `info.json` file, i.e. the object that has the key `2019`.
-   * Try building again.
+   * Create the new .zip file. From within e.g. `data/atli` do: `zip -r ../atli.zip`
+   * A new `data/atli.zip` should now have appeared.
+   * Try building your model again using the new zip file.

@@ -12,7 +12,7 @@ We will be using Google Forms to carry out this task. An example MOS survey is a
 
 ## Technical details
 In your form you should survey:
-* 10 synthesized samples from your Festival TTS
+* 10 synthesized samples from your Festival TTS (you can choose to either use your unit selection voice or your clustergen voice)
 * 10 synthesized samples from your Ossian TTS
 * 5 ground truth samples
 Randomize the order of these so not do add unwanted bias. Make sure that the text being read is different in each sample, otherwise we could also add unwanted bias.
