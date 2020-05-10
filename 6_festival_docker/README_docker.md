@@ -37,7 +37,7 @@ You can either:
 **Attaching VSC to container**
 1. Click the Docker icon on the left side in VSC
 2. A running container will have appeared under the `Containers` list view in the Docker pane. Right click your container and select `Attach Visual Studio Code`.
-3. Now point VSC to `/usr/bin/src` which contains the code for the project by clicking the `open` button on the left side in the newly opened VSC window.
+3. Now point VSC to `/usr/local/src` which contains the code for the project by clicking the `open` button on the left side in the newly opened VSC window.
 
 Note: If the icon in front of your container is a red *stop* icon, you have to right click and select `start` first. Then attach VSC.
 

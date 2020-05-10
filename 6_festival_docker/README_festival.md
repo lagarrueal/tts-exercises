@@ -181,19 +181,31 @@ All the steps to train the model are performed inside `/usr/local/src/lvl_is_txt
 
 ## If you have reached this point, congratulations! You have caught up with us. We are currently doing the finishing touches on the image and it will soon be ready. You can run the following but do note that you will have to re-clone the image when it is ready.
 
-## Testing the Festival recipe
+## 3. Testing the Festival recipe
 We will start by testing the recipe on pre-recorded data.
 
 1. Under `/usr/local/src/`, create a new directory: `mdkir demo_voice`.
 2. Direct your shell to the new directory: `cd demo_voice`
 3. Do e.g. `export VOICE=f` if you want to train on the female voice data.
-4. Run the `build-voice.sh` script via `../lvl_is_text/build-voice.sh`
+4. Select the number of training prompts. Select a low value for fast (but worse) results. Replace:
 
-The script will now perform all of the steps that were mentioned above and this could take some time to finish. If you have not modified `build-voice.sh` then the model will be trained on 100 sentences.
+        head -n1000 txt.nonum.data > etc/txt.done.data
+
+   with
+
+        head -n100 txt.nonum.data > etc/txt.done.data
+
+   to train on only 100 prompts.
+
+5. Run the `build-voice.sh` script via `../lvl_is_text/build-voice.sh`
+
+The script will now perform all of the steps that were mentioned above and this could take some time to finish. To get an idea about what Festival is doing, you can write the `build.out` stream to the terminal window:
+* Open a new terminal window
+* do `tail -f demo_voice/build.out`
 
 If everything went as expected you should have seen a lot of stuff printed in the terminal and a new `example.wav` file should have appeared with an example synthesis sample.
 
-## Creating Your Own Voice
+## 4. Creating Your Own Clustergen Voice
 We will now train the TTS on your own data.
 
 ### Prepare the Data
@@ -248,10 +260,45 @@ You will have to edit this part of `build-voice.sh` to train on your own data:
         unzip <name_of_your_zip>.zip 1> unzip.log 2>unzip.err
 
 ### Train on Your Data
-It's time to create your voice! As with the demo data we do the following:
+It's time to create your clustergen voice! As with the demo data we do the following:
 1. Direct your shell to your voice bulding directory, e.g. `my_voice`.
 2. Run the custom voice building script with e.g. `../lvl_is_text/custom-voice-build.sh`
 3. Wait for results.
 
 ### Synthesize custom sentences
-TODO
+Create a list of sentences (unseen)
+
+
+## 4. Train a Unit Selection Voice
+
+You have now trained an SPS voice, it's time to train a unit selection model. There is very little difference between how we train a unit selection voice and a clusttergen voice in Festival.
+
+At `./data/build-unit-selection.sh` you will find a script similar to the `build-voice.sh` in the Docker image. You should:
+* Copy this script over to the `lvl_is_text` directory in your container (do `chmod +x <your_script_name>.sh` if needed)
+* Make the same adjustements you did to `build-voice.sh` to facilitate training on your own data
+* Create a new voice building directory at `usr/local/src` (e.g `my_unit_selection_voice`)
+* Run the unit selection script from there
+
+
+## Trouble shooting
+
+Your builds might fail and the reason for that should hopefully be written to the `build.err` file in your voice building directory. Here are common build errors that can appear in `build.err`:
+* `LEXICON: Word <word> (plus features) not found in lexicon`: The word `<word>` does not appear in the lexicon. If this word is a part of your training prompt then it likely contains invalid characters. If `<word>` is e.g. `quiet` which is invalid because it contains non-Icelandic characters, then you have to change the line
+
+        grep -v '"[^"]*[0-9c]' txt.complete.data > txt.nonum.data
+
+   To make sure you remove all invalid sentences. If you want to also exclude all words that contain "q", change it to e.g.
+
+        grep -v '"[^"]*[0-9cq]' txt.complete.data > txt.nonum.data
+
+* Some thing similar to:
+
+        Cannot open file prompt-utt/is977Z_r000002019_t000002568.utt as tokenstream
+        load_utt: can't open utterance input file prompt-utt/is977Z_r000002019_t000002568.utt
+        utt.load: loading from "prompt-utt/is977Z_r000002019_t000002568.utt" failed
+
+   There are multiple reasons for why this might happen, a corruption in the recording, a file encoding problem, etc. This hopefully only happens to a subset of your recordings. To fix this, do the following:
+
+   * identify the recording ID of the bad recording, above it is `2019` as indicated by `r000002019`. In some datasets it might be `r2019`.
+   * Remove the corresponding object from your `info.json` file, i.e. the object that has the key `2019`.
+   * Try building again.
