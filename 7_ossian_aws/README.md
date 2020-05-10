@@ -163,8 +163,19 @@ Training on your data will be similar to the Romanian toy demo but some names ha
     * You can at any time reattach to the session with `screen -r`.
 
 # What to turn in
-You should turn in a short document (and .wav files) that contains the same data for your 50-sample corpus and your complete corpus. Add plots of the waveforms to your document as well as comments on the result:
-* The 5 synthesized waveforms generated with the same text
+You should turn in a short document (and .wav files) that contains the same data for your 50-sample corpus and your complete corpus. Add plots of the waveforms to your document as well and comments on the result:
+* 5 synthesized waveforms for the following sentences:
+    ```
+    Hnúfubakur er frekar kubbslega vaxinn, sverastur um miðjuna en mjókkar til beggja enda.
+
+    Kona hans, Hulda Jakobsdóttir varð fyrst kvenna bæjarstjóri á Íslandi, en hún tók við bæjarstjórastöðunni af Finnboga.
+
+    Drykkurinn er þekktur á íslensku undir nafninu kók.
+
+    Fönk er tónlistarstefna sem varð til um miðjan sjöunda áratuginn og er nokkurs konar blanda af djassi, blúsi, gospel og sálartónlist.
+
+    Stutt og laggott.
+    ```
 * Synthesized waveforms for `Halló, ég heiti <your_full_name>. Hvað heitir þú?` (if your name contains none Icelandic characters you should naively replace them with Icelandic characters. You can contact me for advice if needed)
 * Training plots for the acoustic and duration model. They are located in the `plots` directory in `dnn_training_ACOUST` and `dnn_training_DUR` under `$OSSIAN/train/<language>/speakers/<your_first_name | your_first_name_small>/`.
 * Test synthesis on a paragraph, e.g.: `Hugbúnaður, sem verður þróaður í verkefninu, verður aðgengilegur með opnum leyfum. Gögn sem verða til í verkefninu verða einnig með opnum leyfum eins og framast er unnt, segir í fréttatilkynningu. Í samningnum er tekið fram að SÍM muni leggja áherslu á frekara samstarf við atvinnulíf og rannsakendur á sviði máltækni, á Íslandi og á alþjóðavettvangi, í því skyni að hraða þróun máltæknilausna fyrir íslensku.`.

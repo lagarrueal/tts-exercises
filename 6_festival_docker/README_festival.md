@@ -295,11 +295,11 @@ Now it's time to generate synthesis samples. All the tools you need are located 
 
         Kona hans, Hulda Jakobsdóttir varð fyrst kvenna bæjarstjóri á Íslandi, en hún tók við bæjarstjórastöðunni af Finnboga.
 
-        Drykkurinn er þekktur á íslensku undir nafninu kók
+        Drykkurinn er þekktur á íslensku undir nafninu kók.
 
         Fönk er tónlistarstefna sem varð til um miðjan sjöunda áratuginn og er nokkurs konar blanda af djassi, blúsi, gospel og sálartónlist.
 
-        Sú tilgáta hefur verið sett fram að Katrín og Hallbera Þorsteinsdóttir séu ein og sama manneskjan
+        Sú tilgáta hefur verið sett fram að Katrín og Hallbera Þorsteinsdóttir séu ein og sama manneskjan.
 
         Skjálesari er hjálparforrit sem les texta af tölvuskjá upphátt.
 
