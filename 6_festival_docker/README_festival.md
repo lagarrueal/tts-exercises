@@ -290,23 +290,14 @@ Now it's time to generate synthesis samples. All the tools you need are located 
    * The following 10 sentences:
         ```
         Það er greinilegt að vinnu stjórnvalda við breytingar og aðlaganir á aðgerðarpökkunum, til að koma í veg fyrir misnotkun, er hvergi nærri lokið.
-
         Hnúfubakur er frekar kubbslega vaxinn, sverastur um miðjuna en mjókkar til beggja enda.
-
         Kona hans, Hulda Jakobsdóttir varð fyrst kvenna bæjarstjóri á Íslandi, en hún tók við bæjarstjórastöðunni af Finnboga.
-
         Drykkurinn er þekktur á íslensku undir nafninu kók.
-
         Fönk er tónlistarstefna sem varð til um miðjan sjöunda áratuginn og er nokkurs konar blanda af djassi, blúsi, gospel og sálartónlist.
-
         Sú tilgáta hefur verið sett fram að Katrín og Hallbera Þorsteinsdóttir séu ein og sama manneskjan.
-
         Skjálesari er hjálparforrit sem les texta af tölvuskjá upphátt.
-
         Snara er hugtak í netafræði sem á við legg sem tengir hnút í sjálfan sig.
-
         Mikki er talandi og manngerð mús sem venjulega klæðist rauðum stuttbuxum, stórum gulum skóm og hvítum hönskum.
-
         Stutt og laggott.
         ```
     * You will also demonstrate your TTS at the end of the course to us and other students. You can get a good feeling about how your TTS works by testing out *weird* sentences. For example:

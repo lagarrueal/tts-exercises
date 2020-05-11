@@ -76,7 +76,7 @@ One of the great benefits of using VS code over SSH is you can use a fully fletc
     * `pip install git+https://github.com/sequitur-g2p/sequitur-g2p@master`
 5. Clone the Ossian repository: `git clone -b rvk2019 https://github.com/CSTR-Edinburgh/Ossian.git`
 6. Setup Ossian tools:
-    * Create HTK credentials [http://htk.eng.cam.ac.uk/register.shtml](here) and then run:
+    * Create HTK credentials [http://htk.eng.cam.ac.uk/register.html](here) and then run:
         * `export HTK_USERNAME=<your_htk_username>`
         * `export HTK_PASSWORD=<your_htk_password>`
     * Run `cd Ossian`
@@ -163,19 +163,19 @@ Training on your data will be similar to the Romanian toy demo but some names ha
     * You can at any time reattach to the session with `screen -r`.
 
 # What to turn in
-You should turn in a short document (and .wav files) that contains the same data for your 50-sample corpus and your complete corpus. Add plots of the waveforms to your document as well and comments on the result:
-* 5 synthesized waveforms for the following sentences:
+You should turn in a short document (and `.wav` files) that contains the same data for your 50-sample corpus and your complete corpus.
+* 10 synthesized waveforms for the following sentences:
     ```
-    Hnúfubakur er frekar kubbslega vaxinn, sverastur um miðjuna en mjókkar til beggja enda.
-
-    Kona hans, Hulda Jakobsdóttir varð fyrst kvenna bæjarstjóri á Íslandi, en hún tók við bæjarstjórastöðunni af Finnboga.
-
-    Drykkurinn er þekktur á íslensku undir nafninu kók.
-
-    Fönk er tónlistarstefna sem varð til um miðjan sjöunda áratuginn og er nokkurs konar blanda af djassi, blúsi, gospel og sálartónlist.
-
-    Stutt og laggott.
+    Hann er þekktastur fyrir að hafa fyrstur sameinað Kína í eitt ríki og fyrir að hafa tekið upp löghyggju
+    Hann fluttist fimm árum síðar til Mílanó, þar sem hann bjó til æviloka.
+    Ánamaðkar eru tvíkynja liðormar af ættbálki ána.
+    Álmur er hávaxið lauftré af álmsætt með breiða og hvelfda krónu.
+    Eftir dauða Gregoríusar páfa kom til óeirða í Róm þar sem þess var krafist að Rómverji yrði kosinn páfi til að tryggja að páfastóll yrði um kyrrt í borginni.
+    Þetta er japönsk sería sem inniheldur  þáttaraðir, tölvuleiki, leikföng, spil, bækur og fleira.
+    Seinni hluta aldarinnar urðu miklar framfarir í gerð skotvopna og því þurfti að grípa til nýrra leiða til að verjast árásum.
+    Japanska innhafið er grunnt hafsvæði á milli japönsku eyjanna.
+    Í fornum norskum lögum var lén stundum kallað veisla, það er aðstaða sem konungur veitti stuðningsmönnum sínum.
+    Meðgöngusykursýki er ástand sem skapast getur á meðgöngu hjá konum sem hafa ekki sögu um sykursýki og felur í sér háa þéttni glúkósa í blóði á meðan að á meðgöngu stendur.
     ```
-* Synthesized waveforms for `Halló, ég heiti <your_full_name>. Hvað heitir þú?` (if your name contains none Icelandic characters you should naively replace them with Icelandic characters. You can contact me for advice if needed)
 * Training plots for the acoustic and duration model. They are located in the `plots` directory in `dnn_training_ACOUST` and `dnn_training_DUR` under `$OSSIAN/train/<language>/speakers/<your_first_name | your_first_name_small>/`.
-* Test synthesis on a paragraph, e.g.: `Hugbúnaður, sem verður þróaður í verkefninu, verður aðgengilegur með opnum leyfum. Gögn sem verða til í verkefninu verða einnig með opnum leyfum eins og framast er unnt, segir í fréttatilkynningu. Í samningnum er tekið fram að SÍM muni leggja áherslu á frekara samstarf við atvinnulíf og rannsakendur á sviði máltækni, á Íslandi og á alþjóðavettvangi, í því skyni að hraða þróun máltæknilausna fyrir íslensku.`.
+* Like in assignment 7, try out sentences that you think might be *edge cases* and could generate interesting results.
