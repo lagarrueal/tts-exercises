@@ -275,7 +275,7 @@ At `./data/build-unit-selection.sh` you will find a script similar to the `build
 * Copy this script over to the `lvl_is_text` directory in your container (do `chmod +x <your_script_name>.sh` if needed)
 * To avoid having to download everything again, do the following:
     * create a folder called `data` at `/usr/local/src`
-    * Copy the `ipd_clean_slt2018.mdl` from `lvl_is_text` into `data/`
+    * Copy the `ipd_clean_slt2018.mdl` from your existing voice building directory (or download it via `wget https://eyra.ru.is/gogn/ipd_clean_slt2018.mdl`) into `data/`
     * Copy your collection `.zip` file into `data/`
 * Create a new voice building directory at `usr/local/src` (e.g `my_unit_selection_voice`)
 * Change line 16 in `build-unit-selection.sh` to e.g. `VOX=atli.zip` if that's the name of your zip (note: the .zip file can only contain English alphabetical characters)
@@ -353,6 +353,6 @@ Your builds might fail and the reason for that should hopefully be written to th
    * Unzip your collection zip with e.g. `unzip my_zip.zip`
    * identify the recording ID of the bad recording, above it is `2019` as indicated by `r000002019`. In some datasets it might be `r2019`.
    * Remove the corresponding object from your `info.json` file, i.e. the object that has the key `2019`.
-   * Create the new .zip file. From within e.g. `data/atli` do: `zip -r ../atli.zip`
+   * Create the new .zip file. From within e.g. `data/atli` do: `zip -r ../atli.zip *`
    * A new `data/atli.zip` should now have appeared.
    * Try building your model again using the new zip file.
