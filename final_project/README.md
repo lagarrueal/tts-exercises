@@ -55,6 +55,6 @@ You should turn in a PDF made in a text editor, e.g. LaTeX, Office Word, Google 
     * Compare the results of training only on a subset of your dataset and the complete dataset using the Ossian recipe.
     * Error plots for the Ossian recipe.
 
-## Finishing touches
+## Conclusions
 * Comment on which of the models you prefer and why. Put this into context with the amount of data that you trained on.
 * How could you improve the models?
