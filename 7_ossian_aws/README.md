@@ -103,7 +103,7 @@ One of the great benefits of using VS code over SSH is you can use a fully fletc
 To work on Icelandic data we have to import an Icelandic recipe. What you need for that is located under `./data`.
 1. Add `./data/is_nn.cfg` to the `recipes/` directory in Ossian.
 2. Add `./data/ipa2sampa.py` to the `scripts/utils` directory in Ossian.
-3. Add `./data/Lexicon.py` to `scripts/processors/lexicon.py` in Ossian. Put it somewhere after the import statements.
+3. Add `./data/Lexicon.py` to `scripts/processors/lexicon.py` in Ossian.
 4. Add the code from `./data/ice_tokeniser.py` to `scripts.processors/Tokenisers.py` in Ossian. Put it somewhere after the import statements.
 
 # Adding your Icelandic dataset.
@@ -129,7 +129,16 @@ where:
 * e.g. `id_1` can be any identifier you wish to use, as long as `id_1.txt` contains the text being read in `id_1.wav`. To avoid any possible issues, stick to ASCII.
 * `<your_first_name>` should also be ASCII.
 * The text files should only contain the text being read in a single line. They **have to** have the file ending `.txt` as well.
-* Your `.wav` files **have to** be sampled at 16KHz.
+* The Python script `./tools/create_ossian_corpus.py` does this for you mostly.
+    * Basically you call it like: `create_ossian_corpus(/path/to/your/lobe_corpus/, /path/to/your/new/corpus/, 'my_speaker_id')`
+    * where `'speaker_id'` for me could be e.g. `'atli'`.
+    * You still have to copy the Sequitur model yourself and the lexicon.
+    * As some datasets might be slightly different, verify before you train that the generated corpus is according to the schema listed above.
+* Your `.wav` files **have to** be sampled at 16KHz. To do this:
+    * place the `./tools/resample.sh` shell script inside your corpus, specifically inside `your_corpus/audio/speaker_id/`.
+    * Then `cd` to there and do `./resample.sh`.
+    * The script assumes that `sox` is installed. Otherwise you can use `librosa.core.load` to achieve the same.
+
 * `lts.model` is the Sequitur G2P model available in the [G2P repository]((https://github.com/atliSig/g2p)).
 * `lexicon.txt` is at `./data/lexicon.txt`
 

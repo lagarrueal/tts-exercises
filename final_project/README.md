@@ -3,7 +3,7 @@ The final project is an opportunity for you to reflect on the work you have achi
 
 You will turn in a short document, 3-5 pages, that describes your design decisions, the process of creating the models and the results from your MOS survey.
 
-In most cases, you can use the results and text you have already generated in your previous assignments to complete the final project.But remember that it is always good to add your own comments and insights.
+In most cases, you can use the results and text you have already generated in your previous assignments to complete the final project. But remember that it is always good to add your own comments and insights.
 
 You should turn in a PDF made in a text editor, e.g. LaTeX, Office Word, Google Docs. The document should contain a front page with your name and a title. It should then contain the following sections.
 
