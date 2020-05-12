@@ -76,7 +76,7 @@ One of the great benefits of using VS code over SSH is you can use a fully fletc
     * `pip install git+https://github.com/sequitur-g2p/sequitur-g2p@master`
 5. Clone the Ossian repository: `git clone -b rvk2019 https://github.com/CSTR-Edinburgh/Ossian.git`
 6. Setup Ossian tools:
-    * Create HTK credentials [http://htk.eng.cam.ac.uk/register.html](here) and then run:
+    * Create HTK credentials [http://htk.eng.cam.ac.uk/register.shtml](here) and then run:
         * `export HTK_USERNAME=<your_htk_username>`
         * `export HTK_PASSWORD=<your_htk_password>`
     * Run `cd Ossian`
