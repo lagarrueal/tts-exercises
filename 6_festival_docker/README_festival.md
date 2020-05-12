@@ -165,11 +165,11 @@ All the steps to train the model are performed inside `/usr/local/src/lvl_is_txt
 
             ../lvl_is_text/apply_phonology.py ../lvl_is_text/phonology.json .
 
-5. Run the Clustergen build:
+9. Run the Clustergen build:
 
         time bin/build_cg_voice 1>build.out 2>build.err
 
-6. After training, synthesize one sample and save it to `./example.wav`
+10. After training, synthesize one sample and save it to `./example.wav`
 
         echo 'halló _pause ég kann að tala íslensku alveg hnökralaust' |
         ../festival/bin/text2wave \
@@ -178,8 +178,6 @@ All the steps to train the model are performed inside `/usr/local/src/lvl_is_txt
         > example.wav
 
     TODO: this assumes that no preprocessing is applied to the input (which won't be the case in the end).
-
-## If you have reached this point, congratulations! You have caught up with us. We are currently doing the finishing touches on the image and it will soon be ready. You can run the following but do note that you will have to re-clone the image when it is ready.
 
 ## 3. Testing the Festival recipe
 We will start by testing the recipe on pre-recorded data.

@@ -1,5 +1,5 @@
 # Step by step - Icelandic Recipe in Ossian
-This is a step by step tutorial for training a very small corpus in Ossian using the Icelandi recipe.
+This is a step by step tutorial for training a very small corpus in Ossian using the Icelandic recipe.
 
 This tutorial assumes that you have a AWS VM up and running and you have Ossian installed.
 
@@ -25,14 +25,14 @@ Do the following:
                 labelled_corpora/
                     lexicon.txt
                     lts.model
-            speakers/
-                anon_medium_16k/
-                    wav/
-                        id1.wav
-                        ...
-                    txt/
-                        id1.txt
-                        ...
+                speakers/
+                    anon_medium_16k/
+                        wav/
+                            id1.wav
+                            ...
+                        txt/
+                            id1.txt
+                            ...
     ```
 Your corpus is now ready. Remember that you have to copy the `lexicon.txt` and `lts.model` over to the corpus directory yourself.
 

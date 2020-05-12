@@ -104,7 +104,8 @@ To work on Icelandic data we have to import an Icelandic recipe. What you need f
 1. Add `./data/is_nn.cfg` to the `recipes/` directory in Ossian.
 2. Add `./data/ipa2sampa.py` to the `scripts/utils` directory in Ossian.
 3. Add `./data/Lexicon.py` to `scripts/processors/lexicon.py` in Ossian.
-4. Add the code from `./data/ice_tokeniser.py` to `scripts.processors/Tokenisers.py` in Ossian. Put it somewhere after the import statements.
+4. Add `./data/g2p.py` to `tools/bin/g2p.py`
+5. Add the code from `./data/ice_tokeniser.py` to `scripts.processors/Tokenisers.py` in Ossian. Put it somewhere after the import statements.
 
 # Adding your Icelandic dataset.
 Ossian uses a specific file structure for training and testing data. Normally, the training data would include a large corpus of text for training a G2P model to phonetize words that don't appear in the lexicon. But since we already have a G2P model ready we skip that step. You should create a structured dataset with the following format:
