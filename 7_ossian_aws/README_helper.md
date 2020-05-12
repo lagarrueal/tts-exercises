@@ -40,6 +40,8 @@ Your corpus is now ready. Remember that you have to copy the `lexicon.txt` and `
 Make sure that you have followed the steps in the assignment README. It is very important that you are:
 * Using the most up to date `Lexicon.py` file. You should completely replace the one in the VM with this new one
 * Using the most up to date `is_nn.cfg` file as an earlier one contained the wrong sample rate configuration.
+    * You should verify that the file uses the sample rate 16000 rather than 44100.
+    * Open the `is_nn.cfg` file and `ctrl+f` for 44100. If no matches then you are good. Otherwise, replace those values with 16000
 
 # Running
 At `./help/train.sh` is a training script that will perform all the steps mentioned in the assignment README. Copy this script over to the VM's `$OSSIAN` directory and do `chmod +x train.sh`
