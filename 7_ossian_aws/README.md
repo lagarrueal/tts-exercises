@@ -120,7 +120,7 @@ is/
                 id_1.wav
                 id_2.wav
                 ...
-    text_corpora/
+    labelled_corpora/
         ice_g2p/
             lts.model
             lexicon.txt
