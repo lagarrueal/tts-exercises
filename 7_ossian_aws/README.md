@@ -105,6 +105,7 @@ To work on Icelandic data we have to import an Icelandic recipe. What you need f
 2. Add `./data/ipa2sampa.py` to the `scripts/utils` directory in Ossian.
 3. Add `./data/Lexicon.py` to `scripts/processors/lexicon.py` in Ossian.
 4. Add `./data/g2p.py` to `tools/bin/g2p.py`
+    * Also do `chmod +x g2p.py` to make it an executable.
 5. Add the code from `./data/ice_tokeniser.py` to `scripts.processors/Tokenisers.py` in Ossian. Put it somewhere after the import statements.
 
 # Adding your Icelandic dataset.
