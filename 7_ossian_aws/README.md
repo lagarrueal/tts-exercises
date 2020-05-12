@@ -61,28 +61,28 @@ One of the great benefits of using VS code over SSH is you can use a fully fletc
     * Select your amazon EC2 host.
 
 # Setup the necessary tools for Ossian (*on the VM*)
-1. Install Python : `sudo apt-get install python`
-2. Install pip:
+1. Update `apt`: `sudo apt-get update`
+2. Install Python : `sudo apt-get install python`
+3. Install pip:
     * run `curl -O https://bootstrap.pypa.io/get-pip.py`
     * run `python get-pip.py --user`
     * run `export PATH=$PATH:~/.local/bin`
     * Verify pip installation : `pip --version`
-3. Install other system packages:
-    * `sudo apt-get update`
+4. Install other system packages:
     * `sudo apt-get install python2.7-dev swig build-essential autoconf libtool pkg-config python-opengl  python-pyrex python-pyside.qtopengl idle-python2.7 qt4-dev-tools qt4-designer libqtgui4 libqtcore4 libqt4-xml libqt4-test libqt4-script libqt4-network libqt4-dbus python-qt4 python-qt4-gl libgle3 python-dev sox`
-4. Install Python requirements:
+5. Install Python requirements:
     * `pip install numpy==1.16.6 --user`
     * `pip install scipy configobj scikit-learn regex lxml argparse bandmat theano matplotlib soundfile tokenizer==1.4.1 --user`
     * `pip install git+https://github.com/sequitur-g2p/sequitur-g2p@master`
-5. Clone the Ossian repository: `git clone -b rvk2019 https://github.com/CSTR-Edinburgh/Ossian.git`
-6. Setup Ossian tools:
+6. Clone the Ossian repository: `git clone -b rvk2019 https://github.com/CSTR-Edinburgh/Ossian.git`
+7. Setup Ossian tools:
     * Create HTK credentials [http://htk.eng.cam.ac.uk/register.shtml](here) and then run:
         * `export HTK_USERNAME=<your_htk_username>`
         * `export HTK_PASSWORD=<your_htk_password>`
     * Run `cd Ossian`
     * Run `export OSSIAN=$PWD` (Note: you will have to perform this step each time you start a new session.)
     * Run `./scripts/setup_tools.sh $HTK_USERNAME $HTK_PASSWORD`
-7. Verify that everything is working by running a toy example in romanian:
+8. Verify that everything is working by running a toy example in romanian:
     * Get the data:
         * `cd $OSSIAN`
         * `wget https://www.dropbox.com/s/uaz1ue2dked8fan/romanian_toy_demo_corpus_for_ossian.tar?dl=0`

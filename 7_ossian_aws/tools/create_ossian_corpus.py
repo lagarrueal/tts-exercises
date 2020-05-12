@@ -10,7 +10,7 @@ def create_ossian_corpus(in_path:str, out_path:str, voice_name:str):
     speaker_dir = os.path.join(out_dir, 'speakers', voice_name)
     wav_dir = os.path.join(speaker_dir, 'wav')
     txt_dir = os.path.join(speaker_dir, 'txt')
-    other_dir = os.path.join(out_dir, 'text_corpora', 'ice_g2p')
+    other_dir = os.path.join(out_dir, 'labelled_corpora', 'ice_g2p')
 
     os.makedirs(txt_dir)
     os.makedirs(wav_dir)
