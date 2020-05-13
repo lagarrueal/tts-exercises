@@ -1,4 +1,4 @@
-# Step by step - Clustergen
+# Step by step - Clustergen & Unit Selection
 This is a step by step tutorial for running the Icelandic Clustergen recipe in Festival.
 
 ## Before you start
@@ -35,6 +35,15 @@ echo 'halló halló halló' |
 ```
 
 For a more robust synthesis strategy, take a look at the `Finishing and what to turn in` part of the Festival instructions w.r.t. `add_to_lexicon.sh` and `synth_file.sh`.
+
+## Running the Unit Selection Recipe
+You have prepared your data so there is very little you now need to do. Now we will be running the `./help/build-example-us-voice.sh`. You will have to move it to your image and do `chmod +x` again.
+* Create a new voice building directory, e.g. `example_unitselection`
+* Point your shell there
+* run `../lvl_is_text/build-example-us-voice.sh`
+* Wait for results.
+* If everything went OK, you should have a waveform in the `example.wav` file in your voice building directory.
+
 
 ## Troubleshooting
 You should always monitor the `build.err` file in your voice building directory. Take a look at the `build.err` file inside your voice building directory. At the top of the file it might contain something like
