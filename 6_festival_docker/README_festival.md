@@ -57,7 +57,7 @@ We systematically collect the units, in all variations, so as to be able to repr
 
 
 ## 2. About the Recipe
-The recipe you will run uses the  [Clustergen training method](https://www.cs.cmu.edu/~awb/papers/is2006/IS061394.PDF) that is included in Festival. Clustergen is a *statistical parametric synthesis* (SPS) system. SPS systems do not select units  from a database like unit selection systems but generate the waveform directly by training statistical parametric models.
+The recipe you will run uses the  [Clustergen training method](https://www.cs.cmu.edu/~awb/papers/is2006/IS061394.PDF) that is included in Festival. Clustergen is a *statistical parametric synthesis* (SPS) system. SPS systems do not select units from a database like unit selection systems but generate the waveform directly by training statistical parametric models.
 
 ### About Clustergen
 1. **Label the database**:

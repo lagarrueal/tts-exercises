@@ -9,6 +9,7 @@ running before your proceed.
 An example of a database extract is located [here](https://drive.google.com/open?id=1dY3hw23U03oG-obfTlbp0oQRcWJGzCS-). We will test out training on this very small corpus of about 130 recordings.
 * Create a directory under `/usr/local/src` in the Docker container called `data/`.
 * Copy `anon_example.zip` over to the `data` directory
+* **Important**: Some students have had issues with using characters such as "_" in the `$VOX` parameter. Rename the `.zip` as `anonexample.zip` and change the `$VOX` parameter accordingly inside `build-example-voice.sh` (see below).
 * If you haven't already downloaded the G2P sequitur model, cd into `data/` and run `wget https://eyra.ru.is/gogn/ipd_clean_slt2018.mdl`
 * Create a new voice building directory under `/usr/local/src` called `example_clustergen`
 
