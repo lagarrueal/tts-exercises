@@ -58,6 +58,6 @@ We will not present at the University. Instead I have decided to use [Google Mee
     2. Click `present now`
     3. Select `A chrome tab`
     4. Select the tab that contains your presentation.
-
+    5. Make sure that the `Presentation Audio` is set to on inside the Google Meet session.
 
 
