@@ -23,6 +23,13 @@ You can however use Python in any way you see fit and perhaps you may have all t
 
 Install Python requirements with `pip install -r requirements.txt`. You can of course install any additional python requirements using `pip`, just make sure you have your virtual environment activated when you do.
 
+**Note**: The requirements list might not work for you or the list might be out-of-date. If this is the case it should be sufficient to simply install the following requirements using `pip install` :
+```
+numpy
+librosa
+matplotlib
+```
+
 ## Using VS Code + Python (Optional)
 To get the best experience make sure that your VS Code workspace is using the correct Python interpreter. If you are using a virtual environment then the workspace setting `python.pythonPath` has to be set to `/path/to/venv/bin/python`. Normally VS Code takes care of doing this for you by recognizing that there is a virtual environment in the workspace. If not:
 * Make sure you have the VSC Python extension installed (search for `ms-python.python` in the extension search)
