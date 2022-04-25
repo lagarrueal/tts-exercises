@@ -24,8 +24,7 @@ Digital audio is stored as a sequence of `samples`. Each sample is just a numeri
 
 3. Create a function `gen_time(duration, sr)` that creates time stamps in seconds for the given duration at the given sample rate. For e.g. `gen_time(1, 10)` the output should be
     ```
-    array([0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
-        0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ])
+    array([0.0 , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
     ```
 
 ## 2. Creating waves
