@@ -41,7 +41,7 @@ The frequency of a sine wave can be understood as the number of cycles the sine 
 3. (*) Create a function `single_sine()`. In this function you should use `single_period()` to generate the x-axis that the sine function takes as input. Return the results of the sine function. In three different plots, plot the sine wave for the sample rates `10`, `50` and `100`.
     * Use `plt.plot(x, y)` where `x` are the correct time stamps in seconds for each sine wave. You can use a combination of `samples_to_time()` and `single_period()` to generate the time stamps.
 
-    * Describe what you see in the plot. What is the total duration in seconds of each sine wave. Explain the difference in duration of each sine wave.
+    * Describe what you see in the plot. What is the total duration in seconds of each sine wave. Explain why the waves are of different shapes.
 
 
 Based on what we have seen so far, it would be beneficial to be able to control more than just the sample rate of our sine waves. We also want to control:
