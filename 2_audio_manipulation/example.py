@@ -42,7 +42,7 @@ def test():
 
     # Lets give the female recording (wave) a higher relative amplitude
     mixed_wave = wave + 0.5 * wave_2
-    save_audio(mixed_wave, sr, './mixed.wav')
+    save_audio(mixed_wave, sr, './data/mixed.wav')
 
 
 if __name__ == '__main__':
