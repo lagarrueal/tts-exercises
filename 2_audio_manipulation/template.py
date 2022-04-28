@@ -99,19 +99,14 @@ def main():
     print("F1 spectrogramm")
     plot_spectrogram(wave, sr)
     
-    # plot spectrogram of the f1.wav file
-    wave2,sr2 = read_audio('./data/f1.wav')
-    print("F1 spectrogramm")
-    plot_spectrogram(wave2, sr2)
-    
     #plot spectrogram of the f1.wav file with half samples
     half_wave = half_sr(wave)
-    save_audio(half_wave, sr2, './data/half_sr.wav')
+    save_audio(half_wave, sr, './data/half_sr.wav')
     print("Half F1 spectrogramm")
     plot_spectrogram(half_wave, sr)
     
     #plot spectrogram of the f1.wav file with half samples and half sample rate
-    save_audio(half_wave, sr2//2, './data/half_sr2.wav')
+    save_audio(half_wave, sr//2, './data/half_sr2.wav')
     print("Half F1 half sr spectrogramm")
     plot_spectrogram(half_wave, sr//2)
     
@@ -177,7 +172,7 @@ def main():
     # 5. Take the same segments from f1.wav and m2.wav and 
     #    zip them together while using half the sample rate
     #    so the sound is not distorded
-    # 6. Fade f1.wav from 0 to 2 and m2.wav from 0 to 0
+    # 6. Fade f1.wav from 0 to 2 and m2.wav from 2 to 0
     # 7. Concatenate the different waves together to be    
     #    able to hear each transformation separatly
     # 8. Save the result as combination_f1m2.wav in ./data/
